@@ -1,4 +1,4 @@
-export interface RobotStrucure {
+export interface RobotStructure {
   name: string;
   imageUrl: string;
   speed: number;
@@ -6,6 +6,6 @@ export interface RobotStrucure {
   dateOfCreation: string;
 }
 
-export interface RobotDataStructure extends RobotStrucure {
+export interface RobotDataStructure extends RobotStructure {
   id: string;
 }
