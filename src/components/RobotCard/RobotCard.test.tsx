@@ -1,11 +1,12 @@
 import { render, screen } from "@testing-library/react";
 import RobotCard from "./RobotCard";
-import { RobotStructure } from "../../types";
+import { RobotDataStructure } from "../../types";
 
 describe("Given a RobotCard component", () => {
   describe("When it received a robot with the heading 'Arturito'", () => {
     test("Then it should show a heading with the name 'Arturito'", () => {
-      const robotMock: RobotStructure = {
+      const robotMock: RobotDataStructure = {
+        id: "fast1212",
         name: "Arturito",
         speed: 45,
         dateOfCreation: "1972-11-12",
