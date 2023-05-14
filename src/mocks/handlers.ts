@@ -1,10 +1,10 @@
 import { rest } from "msw";
-import useApi from "../hooks/useApi";
 import robotsMock from "./robotsMock";
+import { apiUrl } from "../hooks/useApi";
 
 const handlers = [
-  rest.get(`${useApi}robots`, (_req, res, ctx) => {
-    res(ctx.status(200), ctx.json(robotsMock));
+  rest.get(`${apiUrl}robots`, (_req, res, ctx) => {
+    return res(ctx.status(200), ctx.json(robotsMock));
   }),
 ];
 
