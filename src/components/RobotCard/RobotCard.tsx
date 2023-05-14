@@ -1,21 +1,23 @@
-import { RobotStructure } from "../../types";
+import { RobotDataStructure } from "../../types";
 import RobotCardStyled from "./RobotCardStyled";
 
 interface RobotCardProps {
-  robot: RobotStructure;
+  robot: RobotDataStructure;
 }
 
-const RobotCard = ({
-  robot: { name, speed, endurance, dateOfCreation, imageUrl },
-}: RobotCardProps): JSX.Element => {
+const RobotCard = ({ robot }: RobotCardProps): JSX.Element => {
   return (
     <RobotCardStyled>
-      <span className="robot-card__birth">{dateOfCreation}</span>
-      <img className="robot-card__image" src={imageUrl} alt={name} />
-      <h2 className="robot-card__title">{name}</h2>
+      <span className="robot-card__birth">{robot.dateOfCreation}</span>
+      <img
+        className="robot-card__image"
+        src={robot.imageUrl}
+        alt={robot.name}
+      />
+      <h2 className="robot-card__title">{robot.name}</h2>
       <div className="robot-card__points">
-        <span>{speed}</span>
-        <span>{endurance}</span>
+        <span>{robot.speed}</span>
+        <span>{robot.endurance}</span>
       </div>
     </RobotCardStyled>
   );
