@@ -1,8 +1,18 @@
+import { RobotState } from "../store/robots/robotsSlice";
 import { RobotDataStructure } from "../types";
 
-const robotsMock: RobotDataStructure[] = [
+export const robotMock: RobotDataStructure = {
+  _id: "1ab",
+  name: "ChickenRobot",
+  imageUrl: "casi",
+  speed: 5,
+  endurance: 1,
+  dateOfCreation: "2011",
+};
+
+export const robotsMock: RobotDataStructure[] = [
   {
-    id: "1ab",
+    _id: "1ab",
     name: "ChickenRobot",
     imageUrl: "casi",
     speed: 5,
@@ -10,7 +20,7 @@ const robotsMock: RobotDataStructure[] = [
     dateOfCreation: "2011",
   },
   {
-    id: "2cd",
+    _id: "2cd",
     name: "R2D2",
     imageUrl: "pongo",
     speed: 3,
@@ -18,7 +28,7 @@ const robotsMock: RobotDataStructure[] = [
     dateOfCreation: "1978",
   },
   {
-    id: "3ef",
+    _id: "3ef",
     name: "Mark zuckerberg",
     imageUrl: "foto",
     speed: 2,
@@ -27,4 +37,31 @@ const robotsMock: RobotDataStructure[] = [
   },
 ];
 
-export default robotsMock;
+export const robotStateMock: RobotState = {
+  robots: [
+    {
+      _id: "1ab",
+      name: "ChickenRobot",
+      imageUrl: "casi",
+      speed: 5,
+      endurance: 1,
+      dateOfCreation: "2011",
+    },
+    {
+      _id: "2cd",
+      name: "R2D2",
+      imageUrl: "pongo",
+      speed: 3,
+      endurance: 3,
+      dateOfCreation: "1978",
+    },
+    {
+      _id: "3ef",
+      name: "Mark zuckerberg",
+      imageUrl: "foto",
+      speed: 2,
+      endurance: 2,
+      dateOfCreation: "1980",
+    },
+  ],
+};
