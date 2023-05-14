@@ -14,7 +14,7 @@ describe("Given a robotReducer reducer", () => {
 
       const newRobot: RobotDataStructure[] = [
         {
-          id: "1212",
+          _id: "1212",
           name: "Arturito",
           dateOfCreation: "1978-11-12",
           endurance: 45,
