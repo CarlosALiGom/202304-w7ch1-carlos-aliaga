@@ -1,12 +1,12 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { RobotStructure } from "../../types";
+import { RobotDataStructure } from "../../types";
 
 export interface RobotState {
-  robot: RobotStructure[];
+  robots: RobotDataStructure[];
 }
 
 const initialRobotState: RobotState = {
-  robot: [],
+  robots: [],
 };
 
 const robotSlice = createSlice({
@@ -15,10 +15,10 @@ const robotSlice = createSlice({
   reducers: {
     loadRobots: (
       currentRobot,
-      action: PayloadAction<RobotStructure[]>
+      action: PayloadAction<RobotDataStructure[]>
     ): RobotState => ({
       ...currentRobot,
-      robot: [...action.payload],
+      robots: [...action.payload],
     }),
   },
 });

@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react";
-import Robotslist from "./RobotsList";
-import robotsMock from "../../mocks/mocks";
+import Robotslist from "./RobotsList.js";
+import { robotsMock } from "../../mocks/robotsMock.js";
 
 describe("Given a RobotsList component", () => {
   describe("When its rendered with a robots list", () => {

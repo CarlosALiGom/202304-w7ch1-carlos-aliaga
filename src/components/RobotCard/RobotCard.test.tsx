@@ -6,7 +6,7 @@ describe("Given a RobotCard component", () => {
   describe("When it received a robot with the heading 'Arturito'", () => {
     test("Then it should show a heading with the name 'Arturito'", () => {
       const robotMock: RobotDataStructure = {
-        id: "fast1212",
+        _id: "fast1212",
         name: "Arturito",
         speed: 45,
         dateOfCreation: "1972-11-12",
