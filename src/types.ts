@@ -7,5 +7,5 @@ export interface RobotStructure {
 }
 
 export interface RobotDataStructure extends RobotStructure {
-  id: string;
+  _id: string;
 }

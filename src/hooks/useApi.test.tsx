@@ -1,8 +1,8 @@
 import { renderHook } from "@testing-library/react";
-import robotsMock from "../mocks/robotsMock";
 import { RobotDataStructure } from "../types";
-import useApi from "./useApi";
-import server from "../mocks/server";
+import useApi from "./useApi.js";
+import server from "../mocks/server.js";
+import { robotsMock } from "../mocks/robotsMock.js";
 
 beforeAll(() => server.listen());
 
