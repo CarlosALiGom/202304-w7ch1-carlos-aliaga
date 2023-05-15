@@ -7,7 +7,7 @@ import { RobotState } from "../../store/robots/robotsSlice";
 describe("Given an App component", () => {
   describe("When rendered", () => {
     test("Then it should show the text 'FutuRobots'", () => {
-      const expectedText = /FutuRobots/i;
+      const expectedText = /Roborama/i;
       const mockedRobots: RobotState = robotStateMock;
 
       renderWithProviders(<App />, { robots: mockedRobots });
