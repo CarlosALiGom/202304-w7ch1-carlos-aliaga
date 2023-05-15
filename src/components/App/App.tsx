@@ -3,6 +3,7 @@ import { useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../store";
 import { loadRobotsActionCreator } from "../../store/robots/robotsSlice";
 import RobotsList from "../RobotList/RobotsList";
+import AppStyled from "./AppStyled";
 import { RobotDataStructure } from "../../types";
 
 const App = (): JSX.Element => {
@@ -21,10 +22,10 @@ const App = (): JSX.Element => {
     (state): RobotDataStructure[] => state.robots.robots
   );
   return (
-    <>
-      <h1 className="title">FutuRobots</h1>
+    <AppStyled>
+      <h1 className="title">Roborama</h1>
       <RobotsList robots={robots} />
-    </>
+    </AppStyled>
   );
 };
 

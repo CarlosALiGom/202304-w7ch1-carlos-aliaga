@@ -13,11 +13,13 @@ const RobotCard = ({ robot }: RobotCardProps): JSX.Element => {
         className="robot-card__image"
         src={robot.imageUrl}
         alt={robot.name}
+        width={256}
+        height={149}
       />
       <h2 className="robot-card__title">{robot.name}</h2>
       <div className="robot-card__points">
-        <span>{robot.speed}</span>
-        <span>{robot.endurance}</span>
+        <span>Speed: {robot.speed}</span>
+        <span>Endurance: {robot.endurance}</span>
       </div>
     </RobotCardStyled>
   );
