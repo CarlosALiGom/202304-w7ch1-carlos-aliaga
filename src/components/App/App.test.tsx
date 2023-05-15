@@ -12,7 +12,7 @@ describe("Given an App component", () => {
 
       renderWithProviders(<App />, { robots: mockedRobots });
 
-      const text = screen.getByText(expectedText);
+      const text = screen.getByRole("heading", { name: expectedText });
 
       expect(text).toBeInTheDocument();
     });

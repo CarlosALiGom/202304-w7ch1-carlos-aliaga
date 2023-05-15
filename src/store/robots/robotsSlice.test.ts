@@ -24,11 +24,14 @@ describe("Given a robotReducer reducer", () => {
       ];
 
       const loadRobotsAction = loadRobotsActionCreator(newRobot);
-      const newRobotState = robotReducer(currentRobotsState, loadRobotsAction);
+      const newRobotState: RobotState = robotReducer(
+        currentRobotsState,
+        loadRobotsAction
+      );
 
       const expectedRobotState: RobotState = {
         ...currentRobotsState,
-        robots: [...newRobot],
+        robots: newRobot,
       };
 
       expect(newRobotState).toStrictEqual(expectedRobotState);
