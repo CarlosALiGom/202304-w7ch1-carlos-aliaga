@@ -2,7 +2,7 @@ import axios from "axios";
 import { useCallback } from "react";
 import { RobotState } from "../store/robots/robotsSlice";
 
-export const apiUrl = import.meta.env.VITE_APP_API_URL;
+export const apiUrl = import.meta.env.VITE_API_URL;
 
 const useApi = () => {
   const getRobots = useCallback(async (): Promise<RobotState> => {
