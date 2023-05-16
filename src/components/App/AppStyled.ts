@@ -6,6 +6,7 @@ const AppStyled = styled.div`
   background-color: #1c1c29;
   align-items: center;
   gap: 15px;
+  min-height: 100vh;
 
   .title {
     color: #fafaf9;
